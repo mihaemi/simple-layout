@@ -1,0 +1,233 @@
+/* COMMON STYLES */
+:root {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+
+}
+
+/* LAYOUT */
+.container {
+    width: 1300px;
+    margin: 250px auto;
+}
+
+.row-1 {
+    float: left;
+    display: inline-block;
+}
+
+.row-2 {
+    display: flex;
+}
+
+.col-50 {
+    width: 50%;
+}
+
+.col-50:first-child {
+    padding-right: 3em;
+}
+
+.section--decentralised-economy div {
+    padding-left: 5em;
+    margin-bottom: 220px;
+}
+
+.title-1--center {
+    text-align: center;
+}
+
+.label--top-center {
+    transform: translateY(-100px);
+    text-align: center;
+}
+
+.label--top-left {
+    transform: translateY(-12rem);
+}
+
+.list-1--icon p {
+    margin-left: 30px;
+}
+
+/* TYPOGRAPHY */
+p,
+ul {
+    line-height: 1.7rem;
+    font-weight: 300;
+}
+
+h4 {
+    font-size: 1rem;
+    line-height: 1.7rem;
+    font-weight: 700;
+}
+
+li {
+    margin-bottom: .7em;
+}
+
+.title-1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin: 1em 0 0 0;
+}
+
+.title-2 {
+    font-weight: 100;
+    font-size: 2.7rem;
+    margin: 0 0 .9em 0;
+}
+
+.label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.list--subtitle {
+    color: black;
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+/* COLORS*/
+.label--primary {
+    color: #557ef8;
+}
+
+.label--dashed::before {
+    display: inline-block;
+    content: "_____";
+    font-family: arial;
+    font-size: 1em;
+    margin-right: .7em;
+    transform: translateY(-.5em);
+}
+
+.list--decentralised-economy-checked li:before {
+    content: '\2713';
+    display: inline-block;
+    color: black;
+    margin: 0 6px 0 0;
+}
+
+b {
+    color: #777777;
+}
+
+.list-1--icon li {
+    width: 500px;
+}
+
+.list--style {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem;
+}
+
+.list-1--icon li:nth-child(2n+1) {
+    margin-left: 4rem;
+}
+
+.list-1--icon li:first-child {
+    list-style-image: url(../images/icon1.svg);
+
+}
+
+.list-1--icon li:nth-child(2) {
+    list-style-image: url(../images/icon2.svg);
+    margin-left: 4rem;
+}
+
+.list-1--icon li:nth-child(3) {
+    list-style-image: url(../images/icon3.svg);
+}
+
+.list-1--icon li:nth-child(4) {
+    list-style-image: url(../images/icon4.svg);
+    margin-left: 4rem;
+}
+
+.list-1--icon li:nth-child(5) {
+    list-style-image: url(../images/icon5.svg);
+}
+
+.list-1--icon li:nth-child(6) {
+    list-style-image: url(../images/icon6.svg);
+    margin-left: 4rem;
+}
+
+.telegram-link {
+    text-indent: -9999px;
+    background-image: url(../images/telegram-link.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 40px;
+}
+
+.navbar-collapse {
+    flex-grow: unset !important;
+}
+
+.navbar-brand:hover {
+    opacity: 0.5;
+}
+
+.btn-join:hover {
+    background-color: #72ecdb;
+    border-color: white;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: ''; 
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: black;
+    transition: transform 0.25s;
+    transform: scaleX(0);
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+/*Media Query*/
+
+@media (max-width: 992px) {
+
+    .row-1,
+    .row-2 {
+        display: block;
+        float: unset;
+        margin: 7rem;
+    }
+
+    .section--decentralised-economy div {
+        padding-left: 0;
+    }
+
+    .margin-top {
+        margin-top: 120px;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .list--style {
+        display: list-item;
+        margin-left: 3rem;
+    }
+
+}

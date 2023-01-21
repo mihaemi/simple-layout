@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+}
+
+ol, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.section--roadmap header {
+  margin-bottom: 3em;
+  text-align: center;
+}
+
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+}
+.timeline li {
+  width: 20%;
+  margin-bottom: 3em;
+  padding: 0 2%;
+  box-sizing: border-box;
+  text-align: center;
+}
+@media (min-width: 993px) {
+  .timeline li:nth-child(5n+1) h4::before {
+    display: none;
+  }
+}
+.timeline li.current h4::before {
+  border-bottom-style: solid;
+}
+.timeline li.current h4::after {
+  background: radial-gradient(rgb(235, 159, 27) 0%, rgb(235, 159, 27) 30%, transparent 30%);
+}
+.timeline li.past h4::before {
+  border-bottom-style: solid;
+}
+.timeline li.past h4::after {
+  background: blue;
+}
+.timeline li h4::after {
+  display: block;
+  content: "";
+  width: 1.5em;
+  height: 1.5em;
+  border: 2px solid blue;
+  border-radius: 100%;
+  margin: 1em auto 3em auto;
+}
+.timeline li h4::before {
+  display: block;
+  content: "";
+  border-bottom: 1px dashed blue;
+  transform: translateY(3.5em) translateX(-60%);
+  width: 113%;
+}
+
+@media (max-width: 767px) {
+  .timeline {
+    display: block;
+    margin-left: 100px;
+  }
+  .timeline li {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+  .timeline li:first-child h4::before {
+    display: none;
+  }
+  .timeline li h4 {
+    position: relative;
+    margin-bottom: 0.5rem;
+  }
+  .timeline li h4::after {
+    position: absolute;
+    transform: translateX(-180%) translateY(-170%);
+  }
+  .timeline li h4::before {
+    position: absolute;
+    width: 8%;
+    transform: rotate(90deg) translate(-41px, 79px);
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .timeline li {
+    width: 50%;
+  }
+  .timeline li:nth-child(2n+1) h4::before {
+    display: none;
+  }
+  .timeline li h4::before {
+    transform: translateY(3.5em) translateX(-54%);
+    width: 104%;
+  }
+}/*# sourceMappingURL=roadmap.css.map */
